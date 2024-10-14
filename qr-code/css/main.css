@@ -1,0 +1,71 @@
+@import url("../../common/reset.css");
+@import url("./font.css");
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-slate-300: hsl(212, 45%, 89%);
+    --clr-slate-500: hsl(216, 15%, 48%);
+    --clr-slate-900: hsl(218, 44%, 22%);
+}
+
+body {
+    font-family: var(--ff);
+    background-color: var(--clr-slate-300);
+}
+
+.card {
+    max-width: 500px;
+    background-color: var(--clr-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 1rem 1rem 2.5rem 1rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.15);
+}
+
+.content {
+    display: grid;
+    width: 18rem;
+    gap: 1.5rem;
+}
+
+.content img {
+    border-radius: 0.625rem;
+}
+
+.content .text {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.text__description {
+    --text-color: #000;
+    --line-height: 1.5;
+    --fw: var(--fw-regular);
+    --fs: 1rem;
+    --letter-spacing: 0px;
+
+    color: var(--text-color);
+    line-height: var(--line-height);
+    font-weight: var(--fw);
+    font-size: var(--fs);
+    letter-spacing: var(--letter-spacing);
+}
+
+.description--title {
+    --text-color: var(--clr-slate-900);
+    --line-height: 1.2;
+    --fw: var(--fw-bold);
+    --fs: 1.375rem;
+}
+
+.description--body {
+    --text-color: var(--clr-slate-500);
+    --line-height: 1.4;
+    --fs: 0.9375rem;
+    --letter-spacing: 0.2px;
+}

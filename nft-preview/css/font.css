@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-Light.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-SemiBold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 600;
+}
+
+:root {
+    --ff: 'Outfit', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+}

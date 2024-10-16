@@ -1,0 +1,106 @@
+@import url('../../common/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --clr-white: white;
+    --primary-bg-color: hsl(185, 75%, 39%);
+    --primary-color: hsl(229, 23%, 23%);
+    --primary-color-dark: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 90%);
+
+    --fw-bold: 700;
+    --fw-regular: 400;
+    --fs: 1.125rem;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--primary-bg-color);
+    height: 100vh;
+}
+
+.container {
+    max-width: 17.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs);
+    color: var(--primary-color-dark);
+}
+
+.bg-pattern-top {
+    position: absolute;
+    top: 20vh;
+    left: -5vw;
+    transform: translate(-50%, -50%);
+}
+
+.bg-pattern-bottom {
+    position: absolute;
+    bottom: 20vh;
+    right: -5vw;
+    transform: translate(50%, 50%);
+}
+
+.content {
+    position: relative;
+}
+
+.content .bg-pattern {
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    height: 110px;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.content .profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--clr-white);
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -32%);
+}
+
+.author {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--clr-white);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.author__profile {
+    text-align: center;
+    border-bottom: 1px solid var(--dark-gray);
+    padding-block-end: 1rem;
+    padding-block-start: 3rem;
+}
+
+.author__profile span {
+    font-weight: var(--fw-bold);
+    color: var(--primary-color);
+}
+
+.author__details {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1.5rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.author__details p {
+    font-size: 0.75rem;
+}
+
+.author__details p span {
+    font-weight: var(--fw-bold);
+    color: var(--primary-color);
+    font-size: var(--fs);
+}

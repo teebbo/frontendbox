@@ -4,7 +4,7 @@
 :root {
     --clr-white: white;
     --primary-bg-color: hsl(185, 75%, 39%);
-    --primary-color: hsl(229, 23%, 23%);
+    --primary-color-tint: hsl(229, 23%, 23%);
     --primary-color-dark: hsl(227, 10%, 46%);
     --dark-gray: hsl(0, 0%, 90%);
 
@@ -85,7 +85,7 @@ body {
 
 .author__profile span {
     font-weight: var(--fw-bold);
-    color: var(--primary-color);
+    color: var(--primary-color-tint);
 }
 
 .author__profile .city {
@@ -105,6 +105,6 @@ body {
 
 .author__details p span {
     font-weight: var(--fw-bold);
-    color: var(--primary-color);
+    color: var(--primary-color-tint);
     font-size: var(--fs);
 }

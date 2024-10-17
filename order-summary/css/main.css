@@ -141,7 +141,7 @@ body {
 
 @media (min-width: 50rem) {
     body {
-        background: url("../images/pattern-background-desktop.svg") no-repeat 0 20%;
+        background: var(--primary-color-tint) url("../images/pattern-background-desktop.svg") no-repeat 0 0;
         background-size: cover;
     }
 }

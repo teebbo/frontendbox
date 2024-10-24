@@ -1,0 +1,146 @@
+@import "../common/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+
+    --fs: 0.813rem;
+    --ff: 'Manrope';
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+body {
+    background-color: var(--desaturated-dark-blue);
+}
+
+.container {
+    display: grid;
+    font-family: var(--ff), sans-serif;
+    font-weight: var(--fw-medium);
+    width: min(90vw, 25rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 0.5rem;
+    box-shadow: 8px 8px 5px black;
+    background-color: var(--white);
+}
+
+.share-btn {
+    background-color: var(--light-grayish-blue);
+    padding: 0.625rem;
+    clip-path: circle(50%);
+}
+
+.drawer img {
+    object-fit: cover;
+    object-position: 0 -50%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.content {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.content .title {
+    color: var(--very-dark-grayish-blue);
+    font-size: 1.125rem;
+    font-weight: var(--fw-bold);
+}
+
+.content .description {
+    color: var(--desaturated-dark-blue);
+}
+
+.author-container {
+    display: none;
+}
+
+.author__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.author {
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.author img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.author__name {
+    font-weight: var(--fw-bold);
+    color: var(--very-dark-grayish-blue);
+}
+
+.author__publication-date {
+    color: var(--grayish-blue);
+    font-size: var(--fs);
+}
+
+.socials-container {
+    display: none;
+}
+
+.share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color: var(--very-dark-grayish-blue);
+    padding: 1rem 2rem 1rem 1.5rem;
+}
+
+.share .socials {
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0.5rem;
+}
+
+.share .share__text {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.share .share-btn {
+    background-color: var(--desaturated-dark-blue);
+}
+
+.publication--active {
+    display: block;
+}
+
+.socials-container.publication--active {
+    animation: 0.05s ease-out reverse slideRight;
+}
+
+@keyframes slideRight {
+    from { transform: translateX(1%) }
+    to { transform: translateX(0) }
+}
+
+@media (min-width: 50rem) {
+    
+}
+
+
+
+
+

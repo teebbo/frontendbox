@@ -1,23 +1,48 @@
 (() => {
-    const publicationActive = 'publication--active';
-    const display_container = document.querySelector(".publication .author-container")
-    const share_container = document.querySelector(".socials-container")
-    const share_btn_author = document.querySelector(".publication .author__content .share-btn")
 
-    const onEnter = () => {
-        display_container.classList.remove(publicationActive)
-        share_container.classList.add(publicationActive)
+    const articleMeta = document.querySelector(".article__meta")
+    const articleShare = document.querySelector(".article__share")
+    const shareBtn = document.querySelector(".article__meta .share-btn")
+
+    const show = (element) => {
+        element.classList.add('show')
+
+        if (element.classList.contains('hide')) {
+            element.classList.remove('hide')
+        }
+    }
+
+    const hide = (element) => {
+        element.classList.add('hide')
+        if (element.classList.contains('show')) {
+            element.classList.remove('show')
+        }
+    }
+    let onOver = () => {
+        hide(articleMeta)
+        show(articleShare)
     };
-
-    share_btn_author.onmouseenter = onEnter
-    share_btn_author.onpointerover = onEnter
 
     const onLeave = () => {
-        display_container.classList.add(publicationActive)
-        share_container.classList.remove(publicationActive)
+        show(articleMeta)
+        hide(articleShare)
     };
 
-    share_container.onmouseleave = onLeave
-    share_container.onpointerout = onLeave
+    shareBtn.onmouseover = onOver
+    shareBtn.onpointerover = onOver
+    articleShare.onmouseleave = onLeave
+    articleShare.onpointerleave = onLeave
+
+    let mql = window.matchMedia("(min-width: 920px)");
+    if (mql.matches) {
+        onOver = () => {
+            show(articleShare)
+            articleMeta.classList.remove('hide')
+        };
+        shareBtn.onmouseover = onOver
+        articleShare.onmouseleave = () => {
+            hide(articleShare)
+        }
+    }
 
 })()

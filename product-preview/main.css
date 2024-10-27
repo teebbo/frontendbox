@@ -1,0 +1,130 @@
+@import "../common/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200..800;1,200..800&family=Fraunces:wght@700&display=swap');
+
+:root {
+
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+
+    --fw-bold: 700;
+    --fw-medium: 500;
+    --ff-primary: 'Montserrat', serif;
+    --ff-secondary: 'Fraunces', serif;
+    --fs: 0.875rem;
+    --border-radius: 0.5rem;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.container {
+    display: grid;
+    width: min(90vw, 20rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: var(--white);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.header {
+    & img {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+}
+
+.content {
+    display: grid;
+    gap: 1rem;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-medium);
+    color: var(--dark-grayish-blue);
+    font-size: var(--fs);
+    padding: 1.5rem;
+}
+
+.content__header {
+    .category {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        padding-block-end: 0.5rem;
+    }
+
+    & h1 {
+        font-family: var(--ff-secondary);
+        font-weight: var(--fw-bold);
+        color: var(--very-dark-blue);
+        line-height: 1.2;
+    }
+}
+
+.btn-card {
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center;
+    font-weight: var(--fw-bold);
+    position: relative;
+
+    &::before {
+        content: url("images/icon-cart.svg");
+        position: relative;
+        top: 15%;
+    }
+}
+
+.content__price {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    .new-price {
+        font-family: var(--ff-secondary);
+        font-weight: var(--fw-bold);
+        font-size: 2rem;
+        color: var(--dark-cyan);
+    }
+
+    .old-price {
+        text-decoration: line-through;
+    }
+}
+
+@media (min-width: 45rem) {
+    .container {
+        width: 35rem;
+        grid-template-columns: 50% auto;
+        border-radius: var(--border-radius);
+    }
+
+    .header {
+        & picture {
+            height: 100%;
+
+            & img {
+                height: 100%;
+                border-radius: var(--border-radius) 0 0 var(--border-radius);
+            }
+        }
+    }
+
+    .content__header {
+        & h1 {
+            font-size: 2rem;
+        }
+    }
+}

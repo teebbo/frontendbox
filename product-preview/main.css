@@ -4,6 +4,7 @@
 :root {
 
     --dark-cyan: hsl(158, 36%, 37%);
+    --dark-cyan-shadow: hsl(157, 38%, 18%);
     --cream: hsl(30, 38%, 92%);
     --white: hsl(0, 0%, 100%);
     --very-dark-blue: hsl(212, 21%, 14%);
@@ -126,5 +127,9 @@ body {
         & h1 {
             font-size: 2rem;
         }
+    }
+
+    .btn:is(:hover, :active) {
+        background-color: var(--dark-cyan-shadow);
     }
 }

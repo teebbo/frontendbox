@@ -1,0 +1,163 @@
+@import "../common/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --soft-magenta: hsl(300, 69%, 71%);
+    --violet: hsl(257, 40%, 49%);
+    --white: hsl(0, 0%, 100%);
+
+    --fw-semi-bold: 600;
+    --fw-regular: 400;
+    --ff-primary: 'Open Sans';
+    --ff-secondary: 'Poppins';
+
+    --fs: 1rem;
+    --fs-title: 2rem;
+
+    --border-radius: 0.5rem;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--violet);
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    display: grid;
+    gap: 4.75rem;
+    padding: 2.5rem;
+}
+
+.logo {
+    width: 125px;
+}
+
+.wrapper {
+    display: grid;
+    gap: 3rem;
+}
+
+.content {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    color: var(--white);
+    font-family: var(--ff-primary), sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs);
+
+    .title {
+        font-family: var(--ff-secondary), sans-serif;
+        font-weight: var(--fw-semi-bold);
+        font-size: var(--fs-title);
+    }
+
+    .cta {
+        padding-block-start: 1rem;
+
+        & a {
+            text-decoration: none;
+            color: var(--violet);
+            padding: 0.5rem 4rem;
+            border-radius: 2rem;
+            background-color: var(--white);
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .socials {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-block-start: 3rem;
+
+        .social-item {
+            border-radius: 100%;
+            border: 1px solid var(--white);
+            padding: 0.5rem;
+
+            & svg {
+                fill: var(--white);
+                width: 12px;
+                height: 12px;
+            }
+
+            &:hover {
+                border-color: var(--soft-magenta);
+
+                svg {
+                    fill: var(--soft-magenta);
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: 37.5rem) {
+    .container {
+        max-width: 37rem;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 56rem) {
+
+    body {
+        background-image: url("images/bg-desktop.svg");
+    }
+
+    .container {
+        padding: 2rem 5rem;
+        margin-inline: initial;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    .wrapper {
+        width: 55vw;
+        grid-template-columns: 50% 1fr;
+    }
+
+    .content {
+        text-align: left;
+        gap: 2rem;
+
+        .title {
+            font-size: 4rem;
+        }
+
+        & p {
+            font-size: 1.5rem;
+        }
+
+        .cta {
+
+            & a {
+                padding-block: 1rem;
+            }
+
+            & a:hover {
+                background-color: var(--soft-magenta);
+                color: var(--white);
+            }
+        }
+
+        .socials {
+            justify-self: end;
+
+            .social-item {
+                padding: 0.35rem;
+                & img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}

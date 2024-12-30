@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <div class="form">
+        <form action="" class="bg-dark-blue radius-1">
+            <img src="images/icon-star.svg" alt="star"/>
+            <h2 class="text-lg">How did we do?</h2>
+            <p class="text-md">
+                Please let us know how we did with your support request. All feedback is appreciated
+                to help us improve our offering!
+            </p>
+            <div class="rating">
+                <span class="rating-item">1</span>
+                <span class="rating-item">2</span>
+                <span class="rating-item">3</span>
+                <span class="rating-item">4</span>
+                <span class="rating-item">5</span>
+            </div>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+    <div class="result-container hide">
+        <div class="result bg-dark-blue radius-1">
+            <img src="images/illustration-thank-you.svg" alt=""/>
+            <p>
+                <span class="selected-rating">You selected 4 out of 5</span>
+            </p>
+            <div class="message">
+                <h2 class="text-lg">Thank you!</h2>
+                <p class="text-md">
+                    We appreciate you taking the time to give a rating. If you ever need more support,
+                    don’t hesitate to get in touch!
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Tbo</a>.
+</div>
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
